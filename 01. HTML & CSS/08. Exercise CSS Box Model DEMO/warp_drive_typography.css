@@ -1,0 +1,25 @@
+html {
+    font: 16px/1.5 Verdana, sans-serif;
+}
+
+body, table, textarea, input, option, label {
+    font: inherit
+}
+
+p, ul, ol, dt {
+    padding-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 1em 0 0.4em;
+}
+
+h1 {font-size: 3em;}
+h2 {font-size: 2.2em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1em;}

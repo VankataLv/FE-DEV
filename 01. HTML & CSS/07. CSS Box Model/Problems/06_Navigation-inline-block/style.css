@@ -1,0 +1,26 @@
+html {
+    font: 16px/1.5 Helvetica, sans-serif;
+}
+
+body {
+    margin: 50px;
+    font: inherit
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    color: green;
+}
