@@ -1,0 +1,20 @@
+@import url(typography.css);
+
+.site {
+    max-width: 66ch;
+    margin: 0 auto;
+}
+
+.site-header {
+    border-bottom: 2px solid black;
+    background-color: rgb(250, 188, 31);
+    }
+
+li {
+    display: inline-block;
+}
+
+section p:nth-child(1) {
+    text-decoration: underline;
+}
+

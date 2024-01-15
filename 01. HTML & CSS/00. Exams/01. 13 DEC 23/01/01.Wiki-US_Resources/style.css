@@ -8,10 +8,11 @@ body {
 }
 
 header {
-    background-color: aquamarine;
+    background-color: rgb(181, 241, 221);
     padding: 20px 20px 0px 20px;
     text-align: center;
     font-weight: bold;
+    font-size: 2.5em;
 }
 
 h1 {
@@ -26,12 +27,13 @@ header > p {
 
 div {
     display: inline-block;
+    margin-top: 30px;
 }
 
 /*------------------------------left col------------------------*/
 
 #left_col {
-    width: 30%;
+    max-width: 30%;
     border: 2px solid black;
     margin-left: 20px;
     padding: 7px 10px 10px 10px;
@@ -48,10 +50,14 @@ f_line {
 /*---------------------------------right col--------------------------*/
 
 #right_col {
-    width: 60%;
-    background-color: crimson;
+    max-width: 65%;
     font-weight: bold;
-    padding: 7px 10px 10px 10px;
+    margin-right: 5px;
+    padding: 7px 20px 10px 10px;
+    float: right;
+    font-size: 2.7em;
+    text-indent: 50px;
+    
 }
 
 /*---------------------------------footer --------------------------*/
@@ -59,17 +65,19 @@ f_line {
 h3 {
     background-color: black;
     color: white;
-    width: 600px;
+    width: 800px;
     text-align: center;
     margin-bottom: 0px;
+    font-size: 2em;
 }
 
 ul {
-    background-color: aquamarine;
+    background-color: rgb(181, 241, 221);
     margin-bottom: 0px;
     margin-top: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 25px;
     list-style-type: none;
+    font-size: 1.5em;
 }
