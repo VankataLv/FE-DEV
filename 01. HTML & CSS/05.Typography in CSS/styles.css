@@ -1,0 +1,12 @@
+body {
+    background-color: aqua;
+}
+
+.site-header {
+    border-bottom: 2px solid black;
+    background-color: darkgoldenrod;
+    }
+
+li {
+    display: inline-block;
+}
