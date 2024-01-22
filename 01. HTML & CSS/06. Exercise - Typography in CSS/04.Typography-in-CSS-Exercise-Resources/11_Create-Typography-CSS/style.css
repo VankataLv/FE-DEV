@@ -1,0 +1,18 @@
+body {
+    font-size: 16px/1.5px;
+    font-family: Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+blockquote {
+    border-left: 5px solid rgba(221, 221, 221);
+    font-style: italic;
+    padding-left: 2em;
+}
+
+.author {
+    text-align: right;
+}
