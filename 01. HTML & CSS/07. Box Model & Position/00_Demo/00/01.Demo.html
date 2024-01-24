@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Demo</title>
+    <style>
+        div {
+            padding: 2em;
+            border: 1px dashed black;
+        }
+
+        .outside {
+            background: rgb(247, 180, 25);
+        }
+
+        .border {
+            background: antiquewhite;
+        }
+
+        .padding {
+            background: lightgreen;
+        }
+
+        .content {
+            background: lightblue;
+        }
+
+        .box {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="border">
+            <div class="padding">
+                <div class="content">
+                    Some text here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        Some text here
+    </div>
+</body>
+
+</html>
