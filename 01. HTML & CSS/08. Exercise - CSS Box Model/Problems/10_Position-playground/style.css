@@ -1,0 +1,52 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.viewport {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    max-width: 400px;
+    border-radius: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1em 0.5em rgb(0, 0, 0, 0.2);
+    border: 1p solid #CCC;
+}
+
+.card svg {
+    display: block;
+    width: 2em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    fill: aliceblue;
+}
+
+.viewport:nth-child(1) {
+    background-image:
+        linear-gradient(to bottom right in lab,
+            oklch(70% 0.50 340) 12% 0%, oklch(90% .3 200) 66% 85%);
+    ;
+}
+
+.viewport:nth-child(2) {
+    background-image:
+        linear-gradient(to bottom left in oklab,
+            oklch(53% 0.26 39) 0%, oklch(62% 0.23 95) 100%);
+    ;
+}
