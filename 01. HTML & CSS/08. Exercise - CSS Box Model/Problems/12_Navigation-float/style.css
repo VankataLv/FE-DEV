@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 16px/1.5 Georgia, sans-serif;
+    background-color: rgb(238, 238, 238);
+    padding: 3em 4em 3em 4em;
+}
+
+main {
+    width: 65%;
+}
+
+aside {
+    width: 25%;
+}
+
+header.site-top {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+a {
+    color: rgb(0, 102, 0);
+}
+
+nav {
+    display: inline-block;
+    position: relative;
+    left: 42em;
+}
+
+header.site-top p {
+    text-transform: uppercase;
+    font-size: 3.5em;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0, 0, 0, 0.25);
+    border: 1px solid black;
+    height: auto;
+}
+
+.top-image {
+    float: right;
+    max-height: auto;
+}
