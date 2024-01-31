@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 12px/1.5 Helvetica, sans-serif;
+    padding: 5em;
+}
+
+header {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin-top: 2em;
+}
+
+nav {
+    flex-basis: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+}
+
+li {
+    font-size: 2em;
+
+}
+
+header a {
+    color: rgb(0, 153, 0);
+}
+
+header h1 {
+    font-size: 4em;
+}

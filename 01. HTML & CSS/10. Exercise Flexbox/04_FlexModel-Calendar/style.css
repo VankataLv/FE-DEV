@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+}
+
+section {
+    /* align-items: center; */
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.container {
+    max-width: 65vw;
+    display: flex;
+    /* align-items: center; */
+    margin: 0 auto;
+}
+
+span {
+    border: 1px solid black;
+    display: block;
+    flex-grow: 1;
+    padding: 1em;
+    text-align: center;
+}
+
+.week {
+    background-color: lightskyblue;
+}
+
+.notes {
+    background-color: yellow;
+}
+
+section span:nth-child(1),
+section span:nth-child(7) {
+    flex: 1 0 100%;
+
+}

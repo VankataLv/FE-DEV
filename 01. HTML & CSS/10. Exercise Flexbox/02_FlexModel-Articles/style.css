@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+}
+
+h2 {
+    line-height: 1.2;
+    font-family: Georgia, sans-serif;
+}
+
+section {
+    display: flex;
+    max-width: 100vw;
+    justify-content: space-between;
+    gap: 20px 20px;
+    background-color: aqua;
+
+}
+
+article {
+    flex: 2 1 50px;
+    border: 2px solid black;
+    text-align: center;
+}
