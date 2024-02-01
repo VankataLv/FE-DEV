@@ -1,83 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 html {
-    font: 12px/1.5 Agbalumo, sans-serif;
+    box-sizing: border-box;
+    font: 12px/1.5 "Agbalumo", sans-serif;
 }
 
 body {
     border: 2px solid black;
-    margin: 15px 15px 15px 10px;
+    margin: 1em;
+    width: 900px;
 }
 
 header {
-    background-color: rgb(181, 241, 221);
-    padding: 20px 20px 0px 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.5em;
+    background-color: rgb(213, 235, 234);
 }
 
-h1 {
-    margin-bottom: 0px;
-    border-bottom: 2px solid black;
+footer {
+    background-color: rgb(213, 235, 234);
 }
 
-header > p {
-    margin-top: 0px;
-    border-bottom: 2px solid black;
-}
-
-div {
-    display: inline-block;
-    margin-top: 30px;
-}
-
-/*------------------------------left col------------------------*/
-
-#left_col {
-    max-width: 30%;
-    border: 2px solid black;
-    margin-left: 20px;
-    padding: 7px 10px 10px 10px;
-}
-
-img{
-    width: 100%;
-}
-
-f_line {
-    margin-left: 100px;
-}
-
-/*---------------------------------right col--------------------------*/
-
-#right_col {
-    max-width: 65%;
-    font-weight: bold;
-    margin-right: 5px;
-    padding: 7px 20px 10px 10px;
-    float: right;
-    font-size: 2.7em;
-    text-indent: 50px;
-    
-}
-
-/*---------------------------------footer --------------------------*/
-
-h3 {
+.Facts {
     background-color: black;
     color: white;
-    width: 800px;
+    font-size: 1.6em;
+    text-indent: 50px;
+    margin-right: 25em;
+}
+
+article {
+    padding: 20px 40px 20px 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header h1 {
+    margin-left: 20px;
+    margin-right: 40px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
     text-align: center;
-    margin-bottom: 0px;
-    font-size: 2em;
+    font-size: 2.6em;
+}
+
+header p {
+    margin-left: 20px;
+    margin-right: 40px;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card {
+    border: 2px solid black;
+    padding: 10px;
+    flex: 0 0 30%;
+}
+
+section {
+    flex: 1 0 50%;
+    padding-top: 20px;
+    font-size: 1.5em;
+    text-indent: 50px;
+}
+
+section p:first-of-type {
+    padding-bottom: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    text-indent: 20px;
 }
 
 ul {
-    background-color: rgb(181, 241, 221);
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    line-height: 25px;
-    list-style-type: none;
-    font-size: 1.5em;
+    text-indent: 35px;
+    list-style: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 2;
+}
+
+ul span {
+    font-weight: bold;
 }
