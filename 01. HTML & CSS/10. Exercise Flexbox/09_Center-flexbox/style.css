@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(209, 96, 96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    width: 100%;
+}
+
+.card {
+    background-color: rgb(121, 199, 19);
+    /* align-self: center; */
+}

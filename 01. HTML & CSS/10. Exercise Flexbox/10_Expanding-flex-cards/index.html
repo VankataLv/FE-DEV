@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Flex Cards</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(238, 238, 238);
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 2em;
+            flex: 0 0 60px;
+        }
+
+        img {
+            box-shadow: 1em 1em 3em grey;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <img src="images/Image1.jpg">
+        <img src="images/Image2.jpg">
+        <img src="images/Image3.jpg">
+        <img src="images/Image4.jpg">
+    </section>
+</body>
+
+</html>
