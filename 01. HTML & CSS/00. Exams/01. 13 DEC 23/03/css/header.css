@@ -1,0 +1,35 @@
+.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 0 100%;
+    background-color: #fff;
+    padding: 1em;
+}
+
+.site-header section {
+    display: flex;
+    flex: 1 1 18%;
+    max-width: 345px;
+    flex-direction: row;
+    /* background-color: aqua; */
+}
+
+.site-header li {
+    display: inline-block;
+}
+
+.site-header h1 {
+    font-size: 2.3em;
+    border-right: 2px solid rgb(219, 219, 219);
+    padding: 0em 0.5em;
+    color: rgb(49, 49, 49);
+}
+
+.site-header p {
+    font-size: 1em;
+    align-self: flex-end;
+    padding: 0.5em;
+    padding-left: 2em;
+    color: rgb(128, 128, 128);
+}

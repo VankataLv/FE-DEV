@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 "Inter";
+}
+
+body {
+    max-width: 1920px;
+    height: 975px;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main {
+    /* background-color: blue; */
+    margin: 3.75em 8.75em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2em;
+    align-items: baseline;
+    justify-content: center;
+}
+
+p:not(.quotes):not(.author) {
+    color: 969;
+    font-size: 1.1em;
+    padding-top: 1em;
+}
+
+.left {
+    display: flex;
+    max-width: 55%;
+    /* max-height: auto; */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.right {
+    display: flex;
+    max-width: 27%;
+    flex-direction: column;
+    max-height: 100%;
+    align-self: stretch;
+}
+
+.author {
+    font-weight: bold;
+    padding-top: 1em;
+    font-size: 1.45em;
+}
+
+.left article {
+    flex: 1 0 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 3em;
+    gap: 3em
+}
+
+.right article {
+    flex: 1 0 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 2em;
+}
+
+.left section {
+    flex: 1 0 61%;
+}
+
+.right section {
+    flex: 1 0 100%;
+}
+
+.left-image {
+    max-width: 240px;
+    max-height: 240px;
+    /* background-color: blueviolet; */
+}
+
+.right-image {
+    max-width: 120px;
+    max-height: 120px;
+    /* background-color: blueviolet; */
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.right p:not(.quotes):not(.author) {
+    padding-bottom: 3em;
+}
+
+.right-footer {
+    border-top: 1px solid grey;
+    display: flex;
+    margin-top: 4em;
+    padding-top: 1em;
+}
+
+.right-right-footer {
+    line-height: 0.5;
+    margin-left: 1em;
+    padding-top: 1.5em;
+}
+
+.position {
+    font-size: 1em;
+}

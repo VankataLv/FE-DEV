@@ -1,0 +1,28 @@
+.site-header nav {
+    max-width: 41%;
+    padding-right: 1em;
+    /* background-color: aqua; */
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: last baseline;
+    /* margin-right: 1em; */
+}
+
+.site-header li {
+    background-color: rgb(236, 236, 236);
+    padding: 0.5em;
+    color: rgb(105, 105, 105);
+}
+
+.site-header a {
+    text-decoration: none;
+    color: rgb(118, 105, 105);
+}
+
+.site-header li:first-of-type {
+    background-color: rgb(86, 219, 177);
+}
+
+.site-header li:first-of-type a:first-of-type {
+    color: black;
+}
