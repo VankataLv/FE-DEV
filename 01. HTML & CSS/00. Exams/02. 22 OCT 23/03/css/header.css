@@ -1,0 +1,58 @@
+.site-header {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 620px;
+    padding-top: 2em;
+    display: flex;
+    flex: 1 0 100%;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.header-bar {
+    max-height: 100px;
+    display: flex;
+    padding: 0em 3em 5em 3em;
+    justify-content: space-between;
+    flex: 1 0 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header-box {
+    display: flex;
+    flex: 1 0 100%;
+    max-width: 531px;
+    max-height: 276px;
+    padding-left: 10em;
+    flex-direction: column;
+    padding-bottom: 20em;
+}
+
+.header-bar img {
+    max-width: 70px;
+    max-height: 55px;
+}
+
+.header-box h1 {
+    color: #FFFFFF;
+    padding-bottom: 0.5em;
+}
+
+.header-box p {
+    color: #EFEFED;
+    font-size: 1.1em;
+}
+
+.header-bar nav ul li {
+    list-style: none;
+    display: inline-block
+}
+
+.header-bar nav ul li a {
+    text-decoration: none;
+    color: #C4CAD9;
+    text-transform: uppercase;
+    padding-left: 2em;
+}
