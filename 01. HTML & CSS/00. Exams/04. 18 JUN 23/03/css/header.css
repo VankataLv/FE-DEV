@@ -1,0 +1,28 @@
+.site-header {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 230px;
+    color: black;
+    flex: 1 0 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+}
+
+li {
+    font-size: 1.2em;
+}
+
+.log-sign-box li:nth-child(2) {
+    background-color: #ADE2DF;
+    padding: 1.2em 1.5em;
+    border-radius: 8px;
+}

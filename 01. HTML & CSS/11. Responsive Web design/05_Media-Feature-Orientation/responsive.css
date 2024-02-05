@@ -1,5 +1,17 @@
-body {
-  display: flex;
+@media (orientation: landscape) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 div {

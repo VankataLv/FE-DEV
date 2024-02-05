@@ -100,15 +100,17 @@ p:not(.quotes):not(.author) {
 }
 
 .left img {
-    height: 100%;
     width: 100%;
+    height: auto;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .right img {
-    height: 100%;
     width: 100%;
+    height: auto;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .right p:not(.quotes):not(.author) {

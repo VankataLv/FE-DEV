@@ -1,0 +1,148 @@
+body {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------first-------------------------- */
+
+.first-section {
+    background-color: #ADE2DF;
+    display: flex;
+    flex-direction: column;
+    padding: 8em;
+}
+
+.first-section h1 {
+    color: black;
+    font-size: 4em;
+    align-self: center;
+    padding-bottom: 0.3em;
+}
+
+.first-section p {
+    align-self: center;
+    font-size: 16px;
+    padding-bottom: 2em;
+}
+
+.first-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.first-section button {
+    background-color: black;
+    color: white;
+}
+
+.first-buttons button {
+    padding: 20px 30px 20px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* ------------------------second--------------------------- */
+.second-section {
+    padding: 120px 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.second-section article {
+    border-left: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 35px;
+    max-width: 400px;
+}
+
+.second-section article h3 {
+    font-size: 36px;
+    padding-bottom: 50px;
+}
+
+.second-section article p {
+    font-size: 17px;
+    padding: 0 35px 100px;
+    align-self: center;
+    text-align-last: center;
+}
+
+/* ------------------------third--------------------------- */
+
+.third-section {
+    background-color: #ADE2DF;
+    padding: 0 10em 0 10em;
+    display: flex;
+    flex-direction: row;
+}
+
+.third-section .left {
+    border: 1px dashed grey;
+    width: 500px;
+    height: auto;
+}
+
+.third-section .right {
+    display: flex;
+    flex-direction: column;
+    padding: 8.5em;
+}
+
+.third-section .left img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third-section .right h3 {
+    font-size: 5em;
+}
+
+.third-section .right p:nth-child(2),
+p:nth-child(4) {
+    font-size: 2em;
+}
+
+.third-section .right p:nth-child(3),
+p:nth-child(5) {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+.third-section .right p:nth-child(6) {
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
+    max-width: 20%;
+}
+
+/* ------------------------forth--------------------------- */
+.forth-section {
+    background-color: #F3F5FA;
+    padding: 0 10em 0 10em;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    align-items: center;
+    gap: 2em;
+}
+
+.forth-section button:first-child {
+    background-color: #ADE2DF;
+    font-size: 1.5em;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+    border-color: #F3F5FA;
+}
+
+.forth-section h2 {
+    font-size: 4em;
+}
