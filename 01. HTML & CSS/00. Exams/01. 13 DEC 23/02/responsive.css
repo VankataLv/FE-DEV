@@ -1,0 +1,39 @@
+@media (max-width:600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tm-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 100%;
+        margin: 0;
+        padding: 0 0;
+    }
+
+    .tm-gallery-page {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .tm-gallery-item {
+        max-width: 350px;
+    }
+
+    .tm-cta-section {
+        max-width: 550px;
+        padding-left: 2em;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .col-md-6 {
+        display: flex;
+        flex: 1 0 100%;
+        align-items: center;
+        max-width: 550px;
+
+    }
+}

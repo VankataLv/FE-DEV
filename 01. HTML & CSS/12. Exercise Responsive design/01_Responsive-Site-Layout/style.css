@@ -1,0 +1,55 @@
+@import url(responsive.css);
+
+body {
+    font: 14px/1.5 Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+header {
+    background-color: cyan;
+    padding-left: 1em;
+}
+
+main {
+    display: flex;
+    gap: 1em;
+}
+
+footer {
+    background-color: cyan;
+    padding-left: 1em;
+}
+
+nav {
+    background-color: cyan;
+    width: 10%;
+}
+
+section {
+    background-color: cyan;
+    padding-left: 1em;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+nav ul {
+    padding-left: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+section ul {
+    padding-left: 2em;
+    list-style: disc;
+}
