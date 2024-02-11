@@ -1,0 +1,123 @@
+@media (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
+
+    ul {
+        padding-inline-start: 0;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header nav ul {
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title {
+        padding: 1em;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-description-wrapper ul {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .team-description-wrapper ul li img {
+        height: auto;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .choose-us {
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .choose-us ul {
+        display: flex;
+        flex-direction: column;
+        padding: 5em;
+    }
+
+    .blog-news {
+        max-width: 600px;
+        text-align: center;
+        padding: 1em;
+        width: 100%;
+    }
+
+    .blog-news ul {
+        display: flex;
+        flex-direction: column;
+        padding: 2em 4em;
+    }
+
+    .item {
+        max-width: 430px;
+        width: 100%;
+    }
+
+    .avatar {
+        width: 100%;
+        max-width: 250px;
+        max-height: 215px;
+    }
+
+    .avatar {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .item img {
+        height: 100%;
+        object-fit: fill;
+        width: 100%;
+    }
+
+    .blog-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding: 10px;
+    }
+
+    .blog-news .content {
+        max-width: 180px;
+        padding: 2em 1em;
+        justify-content: flex-start;
+    }
+
+    .blog-news ul .item .avatar img {
+        height: 100%;
+    }
+
+    .content h4 {
+        font-size: 14px;
+    }
+
+    .content p {
+        font-size: 7px;
+    }
+}

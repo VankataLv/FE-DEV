@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font: 12px/1.5 "Inter";
+}
+
+body,
+input,
+textarea {
+    font: inherit;
+}
+
+/* --- TYPO --- */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1920px;
+}
+
+.container-plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7em 12em;
+    max-width: 80%;
+    gap: 2em;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 2em;
+}
+
+.card h3 {
+    font-size: 2em;
+}
+
+.card .price {
+    font-size: 4.8em;
+}
+
+.card p:nth-child(3) {
+    color: #373737;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    line-height: 2.5em;
+}
+
+.card a {
+    text-decoration: none;
+    background-color: black;
+    color: #FFFFFF;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+}
+
+.side-card {
+    margin: 1em 0;
+    align-self: stretch;
+
+}
+
+.center-card {
+    align-self: stretch;
+}

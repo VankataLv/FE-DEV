@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 100%;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4.5em 1em 10em;
+}
+
+.header h1 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+}

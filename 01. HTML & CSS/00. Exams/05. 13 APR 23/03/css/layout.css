@@ -1,0 +1,252 @@
+body {
+    max-width: 1552px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- first -----------------*/
+
+.first-container {
+    background-color: #85DCFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-container .text-box {
+    padding: 5em 35em 5em 13em;
+}
+
+.first-container img {
+    padding-right: 6em;
+}
+
+.text-box h3 {
+    font-size: 22px;
+    padding-bottom: 1em;
+}
+
+.text-box p {
+    padding-bottom: 1em;
+}
+
+.text-box button {
+    padding: 1em 4em 1em 4em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.text-box .donate {
+    background-color: white;
+}
+
+.text-box .join {
+    background-color: black;
+    color: white;
+    margin-left: 2em;
+}
+
+/* ---------------- second -----------------*/
+.second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.second-container h3 {
+    font-size: 22px;
+    padding-bottom: 2em;
+    font-weight: bold;
+}
+
+.second-container>p {
+    font-size: 16px;
+    padding-bottom: 3em;
+    font-weight: bold;
+}
+
+.cards-box {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    padding: 0 7em;
+    gap: 1.5em;
+}
+
+.card>p {
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ---------------- third -----------------*/
+.third-container {
+    background-color: #85DCFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 4em;
+}
+
+.third-container>h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.third-container table {
+    padding: 0 12em 0 20em;
+}
+
+td {
+    vertical-align: top;
+    text-align: left;
+    text-indent: -1.4em;
+}
+
+.third-container tr td:first-child {
+    width: 50%;
+    padding-right: 5em;
+}
+
+.third-container tr td:nth-child(2) {
+    padding-right: 6em;
+}
+
+.third-container button {
+    background-color: black;
+    color: white;
+    margin-left: 2em;
+    padding: 0.5em 2.5em;
+    border-radius: 5px;
+}
+
+/* ---------------- forth -----------------*/
+.forth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 4em;
+}
+
+.forth-container h3 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.image-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* ---------------- fifth -----------------*/
+.fifth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 4em;
+}
+
+.article-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+article {
+    margin: 2em;
+    border-left: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    border-radius: 5px;
+}
+
+article h4 {
+    background-color: #85DCFF;
+    padding: 1em;
+    font-size: 1.4em;
+}
+
+article p {
+    padding-right: 18em;
+    padding-left: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1.4em;
+}
+
+/* ---------------- sixth -----------------*/
+.sixth-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4em;
+}
+
+.sixth-container img {
+    width: 50%;
+}
+
+.sixth-container .text-box-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-self: center;
+    padding-left: 2em;
+}
+
+.sixth-container .text-box-6 h3 {
+    font-size: 3.6em;
+    font-weight: bold;
+}
+
+.sixth-container .text-box-6 p {
+    font-size: 1.8em;
+}
+
+.sixth-container>.text-box-6>.input-6 {
+    margin-right: 25em;
+    padding: 1em 10em 1em 1em;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.sixth-container>.text-box-6>.send-6 {
+    background-color: black;
+    color: white;
+    padding: 1em 3em;
+    border-radius: 5px;
+    margin-right: 33em;
+}
+
+/* ---------------- footer -----------------*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 2em 2em 8em;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
