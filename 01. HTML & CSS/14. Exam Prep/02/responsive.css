@@ -1,0 +1,17 @@
+@media (max-width:600px) {
+    .home-header {
+        padding: 12px 0;
+    }
+
+    .home-navbar1 {
+        display: none;
+    }
+
+    .Heading-2 {
+        font-size: 22px
+    }
+
+    .section-heading-text1 {
+        font-size: 12px;
+    }
+}
