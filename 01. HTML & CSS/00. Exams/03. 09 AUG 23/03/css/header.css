@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 4em 1em 3em;
+}
+
+header li {
+    display: inline;
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+    padding-right: 1em;
+}
+
+header button {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    border: 1px solid #888888;
+    border-right: 1px solid #0B0B0B;
+}
