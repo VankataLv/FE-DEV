@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 12px/1.5 "Inter";
+    /* <--- CHANGE FONT!!! --- */
+}
+
+body,
+input,
+textarea {
+    font: inherit;
+}
+
+/* --- END of TYPOGRAPHY --- */
+
+body {
+    margin: 0 auto;
+    max-width: 1920px;
+    /* <--- CHANGE max-width!!! --- */
+}

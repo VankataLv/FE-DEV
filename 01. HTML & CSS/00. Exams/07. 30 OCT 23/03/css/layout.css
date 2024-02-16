@@ -1,0 +1,117 @@
+body {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+/* ---------------- welcome-container -----------------*/
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    background-color: white;
+    padding: 2em 0 4em 0;
+}
+
+.welcome-container>h2 {
+    font-size: 2.83em;
+    background: linear-gradient(#D01919 0 0) bottom/ 35% 2px no-repeat, white;
+    padding-bottom: 1em;
+}
+
+.welcome-container>.welcome-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13em;
+}
+
+.welcome-container>.welcome-cards>.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    max-width: 285px;
+}
+
+.welcome-container>.welcome-cards>.card>img {
+    max-width: 60px;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.welcome-container>.welcome-cards>.card>h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #D22C27;
+}
+
+.welcome-container>.welcome-cards>.card>p {
+    text-align: center;
+    font-size: 1.33em;
+}
+
+
+/* ---------------- coaches-container -----------------*/
+
+.coaches-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    background-color: #EFEFEF;
+    padding: 2em 0 4em 0;
+}
+
+.coaches-container>h2 {
+    font-size: 2.83em;
+    background: linear-gradient(#D01919 0 0) bottom/ 35% 2px no-repeat, #EFEFEF;
+    ;
+    padding-bottom: 1em;
+}
+
+.coaches-container>.coaches-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13em;
+}
+
+.coaches-container>.coaches-cards>.coach-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    max-width: 314px;
+}
+
+.coaches-container>.coaches-cards>.coach-card>img {
+    max-width: 314px;
+    max-height: 206px;
+    border-radius: 5px;
+}
+
+.coaches-container>.coaches-cards>.coach-card>h4 {
+    font-size: 1.4em;
+    color: black;
+}
+
+.coaches-container>.coaches-cards>.coach-card>h5 {
+    color: #D22C27;
+}
+
+.coaches-container>.coaches-cards>.coach-card>p {
+    text-align: center;
+    font-size: 1.33em;
+    color: #A6A8BF;
+    max-width: 276px;
+}
+
+/* ---------------- footer -----------------*/
+footer {
+    background-color: #D01919;
+    text-align: center;
+    font-size: 1.33em;
+    font-weight: bold;
+    padding: 0.5em 0;
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 12px/1.5 "Open Sans";
+}
+
+body,
+input,
+textarea {
+    font: inherit;
+}
+
+/* --- END of TYPOGRAPHY --- */
+
+body {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.container {
+    margin: 50px 230px 80px 230px;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #9D9E9E;
+    border-radius: 13px;
+    box-shadow: 2px 10px 10px #949494;
+}
+
+img {
+    width: 580px;
+    height: auto;
+}
+
+.calculator-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    align-items: center;
+    flex: 1 1 100%;
+    gap: 2em;
+    height: 580px;
+    padding-top: 5em;
+    background-color: #F6F7F8;
+}
+
+.calculator-box h3 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 3em;
+}
+
+.calculator-box p {
+    font-weight: bold;
+}
+
+.calculator-box .button-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
+
+.calculator-box .button-row :first-child {
+    color: black;
+    text-decoration: none;
+    background-color: #86D862;
+    padding: 1em 2cqh;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+.calculator-box .button-row :nth-child(2) {
+    color: black;
+    text-decoration: none;
+    background-color: #E0E0DF;
+    padding: 1em 3em;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.calculator-box .gender-box {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.calculator-box .gender-box :nth-child(1) {
+    width: 165px;
+}
+
+.calculator-box .gender-box :nth-child(2) {
+    width: 144px;
+}
+
+.weight-field {
+    width: 420px;
+}
+
+.height-box {
+    display: flex;
+    gap: 1.5em;
+    padding-bottom: 1em;
+}
+
+.height-box input {
+    width: 220px;
+}
+
+.calculator-box .calculate-button {
+    background-color: #05A2D3;
+    color: white;
+    text-decoration: none;
+    width: 480px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.5em 0;
+    box-shadow: 2px 10px 10px #949494;
+}

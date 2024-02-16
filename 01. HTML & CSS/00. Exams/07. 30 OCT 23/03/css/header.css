@@ -1,0 +1,85 @@
+header {
+    background-color: #D01919;
+    display: flex;
+    flex-direction: column;
+}
+
+header .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 5em 1em 5em;
+}
+
+header .left-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 5px;
+}
+
+header .center-banner {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+header .right-banner {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+header .image-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url("../image/fitness-main.jpg") 0 -280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    padding: 1em 5em 6em 5em;
+    flex: 1 1 100%;
+}
+
+.image-nav>nav {
+    align-self: flex-end;
+    gap: 5.6em;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8em;
+}
+
+.image-nav>nav>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.33em;
+}
+
+.image-nav>h1 {
+    font-size: 4.5em;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 2em;
+}
+
+.image-nav>p {
+    font-size: 1.33em;
+    color: white;
+    padding-bottom: 2em;
+    max-width: 466px;
+    text-align: center;
+}
+
+.image-nav>a {
+    text-decoration: none;
+    color: white;
+    background: #D01919;
+    padding: 0.3em 1.4em;
+    border-radius: 5px;
+    font-size: 1.33em;
+}
