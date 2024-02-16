@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css2?family=Mulish&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 12px/1.5 "Mulish";
+}
+
+body,
+input,
+textarea {
+    font: inherit;
+}
+
+/* --- END of TYPOGRAPHY --- */
+
+body {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.site-background {
+    background-image: url(images/background.png);
+    max-width: 1600px;
+    /* height: auto; */
+    object-fit: scale-down;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10em 36.6em;
+}
+
+.site-background .form-container {
+    background-image: url(images/form-background.png);
+    max-width: 705px;
+    max-height: 508px;
+    object-fit: scale-down;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 4em 1em 3em 4em;
+    box-shadow: 15px 15px 20px #949494;
+}
+
+.form-fields {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+}
+
+.form-fields p {
+    font-size: 0.91em;
+    color: lightslategray;
+}
+
+.form-fields input {
+    border-radius: 20px;
+    border: 1px solid lightslategrey;
+    min-height: 30px;
+}
+
+.name-row,
+.email-row,
+.password-row,
+.confirm-password-row,
+.privacy-policy {
+    align-self: flex-start;
+}
+
+.form-fields>p:nth-child(1) {
+    font-size: 1.66em;
+    color: black;
+    text-transform: uppercase;
+}
+
+.name-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+input:not(.row, .checkbox) {
+    width: 300px;
+}
+
+.privacy-policy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.privacy-policy>label {
+    color: lightslategray;
+}
+
+a {
+    color: whitesmoke;
+    align-self: center;
+    background-color: #AE3C33;
+    padding: 1em 2em;
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
