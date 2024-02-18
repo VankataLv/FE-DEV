@@ -1,0 +1,155 @@
+@media (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
+
+    header {
+        padding: 1em 0;
+    }
+
+    header>nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    header>nav>ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-title {
+        padding: 1em;
+    }
+
+    .header-title>h1 {
+        font-size: 26px;
+    }
+
+    .header-title>p {
+        font-size: 10px;
+    }
+
+    .header-title>button {
+        margin-top: 1em;
+        font-size: 10px;
+    }
+
+    /* ----- main ---- */
+
+    .about-us>h3 {
+        font-size: 12px;
+    }
+
+    .about-us>p {
+        font-size: 8px;
+    }
+
+    .about-us p:nth-child(2) {
+        padding-bottom: 2em;
+    }
+
+    .team-description-wrapper {
+        padding: 1em 0;
+    }
+
+    .team-description-wrapper>h3 {
+        font-size: 12px;
+    }
+
+    .team-description-wrapper p {
+        font-size: 8px;
+    }
+
+    .team-description p:nth-child(2) {
+        padding-bottom: 2em;
+    }
+
+    .team-description-wrapper ul {
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-bottom: 2em;
+    }
+
+    .team-description-wrapper ul li img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /*-------- choose-us---- */
+
+    .choose-us {
+        padding: 2em 0 1em 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .choose-us ul {
+        flex-direction: column;
+        max-width: 210px;
+    }
+
+    .choose-us ul li {
+        align-self: center;
+    }
+
+    .choose-us ul li h4 {
+        font-size: 10px;
+    }
+
+    .choose-us ul li p {
+        font-size: 8px;
+    }
+
+    .choose-us ul li img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    /* ---- BLOG ---- */
+    .blog-news {
+        padding: 20px 60px;
+    }
+
+    .blog-news>h3 {
+        font-size: 12px;
+    }
+
+    .blog-news>p {
+        font-size: 9px;
+    }
+
+    .blog-news ul {
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 1.5em;
+    }
+
+    .blog-news ul li {
+        max-width: 295px;
+        max-height: 170px;
+    }
+
+    .blog-news ul li h4,
+    .blog-news ul li p {
+        font-size: 9px;
+    }
+
+    .blog-news .content {
+        max-width: 42%;
+        padding: 2.0em 1em;
+    }
+
+    .avatar img {
+        max-width: 170px;
+        height: auto;
+    }
+
+    /* ---- FOOTER ---- */
+
+    footer {
+        font-size: 8px;
+    }
+}

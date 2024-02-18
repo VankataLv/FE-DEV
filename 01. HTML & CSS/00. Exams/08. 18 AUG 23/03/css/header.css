@@ -1,0 +1,56 @@
+header {
+    max-width: 1100px;
+    width: 100%;
+    background: url('../image/image.jpg')-20px -450px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5em 5em 27.5em 4em;
+    flex: 1 0 100%;
+}
+
+.left-container {
+    align-self: flex-start;
+    max-width: 243px;
+    border: 1px solid #6C6A6B;
+    padding: 1em 4em 1em 1em;
+    box-shadow: 2px 1px 10px 2px grey;
+}
+
+.left-container h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+    border-bottom: 2px solid white;
+    color: #363434;
+    max-width: 120px;
+}
+
+.left-container p {
+    padding-top: 0.7em;
+    font-size: 1.33em;
+    max-width: 160px;
+}
+
+.right-container {
+    align-self: flex-end;
+    max-width: 325px;
+    background-color: #C7C3BF;
+    box-shadow: 2px 1px 10px 2px grey;
+    padding: 16px;
+}
+
+.right-container p:nth-child(1) {
+    text-align: right;
+    font-size: 70px;
+    line-height: 1;
+    padding-bottom: 0.1em;
+    color: #8D8581;
+}
+
+.right-container p:nth-child(2) {
+    color: white;
+    font-size: 1.33em;
+    text-align: right;
+}

@@ -1,0 +1,59 @@
+body {
+    margin: 0 11.25em;
+    max-width: 1368px;
+}
+
+main {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* ---------------- left-col -----------------*/
+
+.left-col {
+    background-color: #F2F0F3;
+    width: 70%;
+    padding: 5em 6em 5em 6em;
+    color: #333333;
+}
+
+.left-col .services {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8em;
+    padding-right: 12.9em;
+    padding-bottom: 7.5em;
+}
+
+.left-col .services h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+
+}
+
+.left-col .services article p {
+    font-size: 16px;
+}
+
+.left-col .services article p span {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* ---------------- rigth-col  -----------------*/
+.right-col {
+    width: 30%;
+    background-color: #BAB1AD;
+}
+
+/* ---------------- forth -----------------*/
+
+
+/* ---------------- fifth -----------------*/
+
+/* ---------------- sixth -----------------*/
+
+
+/* ---------------- footer -----------------*/
