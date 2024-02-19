@@ -1,5 +1,5 @@
 function month_primer(input) {
-    if (input > 12 && input < 1) {
+    if (input > 12 || input < 1) {
         console.log("Error!")
     }
     else if (input == 1) {
@@ -39,7 +39,3 @@ function month_primer(input) {
         console.log("December")
     }
 }
-
-month_primer(5)
-month_primer(12)
-month_primer(44)
