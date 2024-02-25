@@ -2,7 +2,7 @@ function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, arm
     let expences = 0;
     let shieldBrokenCounter = 0;
 
-    for (let i = 1; i < lostFights; i++) {
+    for (let i = 1; i <= lostFights; i++) {
 
         if (i % 3 == 0 && i % 2 == 0) {
             expences += swordPrice;
@@ -20,6 +20,7 @@ function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, arm
 
         if (shieldBrokenCounter % 2 == 0 && shieldBrokenCounter != 0) {
             expences += armourPrice;
+            shieldBrokenCounter = 0;
         }
     }
     console.log(`Gladiator expenses: ${expences.toFixed(2)} aureus`)
