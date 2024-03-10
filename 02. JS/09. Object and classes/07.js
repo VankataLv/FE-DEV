@@ -6,16 +6,8 @@ function addressbook(arr) {
         db[name] = address
     }
 
-    let unsortedDb = Object.entries(db);
-    let sortedDb = unsortedDb.sort((a, b) => {
-        keyA = a[0];
-        keyB = b[0];
-    }
-    );
-
-
-    for (let key in sortedDb) {
-        console.log(`${key} -> ${sortedDb[key]}`)
+    for (let key of Object.keys(db).sort()) {
+        console.log(`${key} -> ${db[key]}`)
     }
 }
 
