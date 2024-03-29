@@ -2,16 +2,16 @@ function deleteByEmail() {
     const inputFieldElement = document.querySelector('input[name=email]');
     const resultFieldElement = document.getElementById('result');
     const tableSecondColumn = document.querySelectorAll('table#customers tbody tr td:nth-child(2')
-    let successfylDeletion = false;
+    let successfulDeletion = false;
 
     for (td of tableSecondColumn) {
         if (td.textContent == inputFieldElement.value) {
             let rowToBeDeleted = td.parentNode;
             rowToBeDeleted.parentNode.removeChild(rowToBeDeleted);
-            successfylDeletion = true
+            successfulDeletion = true
         }
     }
-    if (successfylDeletion) {
+    if (successfulDeletion) {
         resultFieldElement.textContent = "Deleted.";
     }
     else {
