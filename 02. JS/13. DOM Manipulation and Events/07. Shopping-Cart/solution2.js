@@ -12,7 +12,7 @@ function solve() {
       buttonElement.addEventListener('click', () => {
          const title = productElement.querySelector('.product-title').textContent;
          const price = Number(productElement.querySelector('.product-line-price').textContent);
-
+         
          totalPrice += price;
          uniqueProducts[title] = true;
 
