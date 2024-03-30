@@ -29,7 +29,6 @@ function attachEventsListeners() {
             hoursInputElement.value = timeData.hours;
             minutesInputElement.value = timeData.minutes;
             secondsInputElement.value = timeData.seconds;
-            console.log(timeData)
         }
     }
 
