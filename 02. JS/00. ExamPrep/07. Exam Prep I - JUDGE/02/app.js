@@ -14,7 +14,11 @@ function solve() {
     // Get the info and create the object -------------
     publishBtnElement.addEventListener('click', (publish) => {
 
-        if (checkFieldContent(arrInfo)) {
+        for (el of arrInfo) {
+            if (el.value.trim() == "") {
+                return
+            }
+
             storyObj.firstName = firstNameElement.value;
             storyObj.lastName = lastNameElement.value;
             storyObj.age = ageElement.value;
@@ -80,36 +84,49 @@ function solve() {
         liElement.appendChild(deleteBtnElement)
 
         ulElement.appendChild(liElement)
+
+        // Functionality off buttons
+
+        // Edit BTN
+        editBtnElement.addEventListener('click', (edit) => {
+            saveBtnElement.disabled = true
+            editBtnElement.disabled = true
+            deleteBtnElement.disabled = true
+            publishBtnElement.enabled = true
+
+            firstNameElement.value = storyObj.firstName;
+            lastNameElement.value = storyObj.lastName;
+            ageElement.value = storyObj.age;
+            titleElement.value = storyObj.title;
+            genreElement.value = storyObj.genre;
+            storyElement.value = storyObj.storyText;
+
+            ulElement.removeChild(liElement)
+        })
+
+        //Save Btn
+        saveBtnElement.addEventListener('click', (save) => {
+            let bodyElement = document.querySelector('.body')
+            let mainElement = document.getElementById('main')
+            mainElement.remove()
+            let h1Element = document.createElement("h1")
+            h1Element.textContent = "Your scary story is saved!"
+            let newMainElement = document.createElement("div")
+            newMainElement.setAttribute('id', 'main')
+            newMainElement.appendChild(h1Element)
+            bodyElement.appendChild(newMainElement)
+        })
+
+        //Delete Btn
+        deleteBtnElement.addEventListener('click', (del) => {
+            saveBtnElement.disabled = true
+            editBtnElement.disabled = true
+            deleteBtnElement.disabled = true
+            publishBtnElement.enabled = true
+
+            liElement.remove()
+        })
     })
-    // Functionality off buttons
-    editBtnElement = document.querySelector('.edit-btn')
-    // Edit BTN
-    editBtnElement.addEventListener('click', (edit) => {
-        saveBtnElement.disabled = true
-        editBtnElement.disabled = true
-        deleteBtnElement.disabled = true
-        publishBtnElement.enabled = true
-
-        firstNameElement.value = storyObj.firstName;
-        lastNameElement.value = storyObj.lastName;
-        ageElement.value = storyObj.age;
-        titleElement.value = storyObj.title;
-        genreElement.value = storyObj.genre;
-        storyElement.value = storyObj.storyText;
-
-        ulElement.appendChild(liElement)
-    })
-
-    // Check Contents of the fields
-    function checkFieldContent(arr) {
-        for (let el of arr) {
-            if (el.value.trim().length === 0) {
-                return false
-            }
-        }
-        return true
-    }
-
 }
 
 
