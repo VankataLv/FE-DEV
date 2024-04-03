@@ -87,12 +87,13 @@ function solve() {
 
         // Functionality off buttons
 
-        // Edit BTN
+        // Edit BTN ,Publish ne raboti
         editBtnElement.addEventListener('click', (edit) => {
             saveBtnElement.disabled = true
             editBtnElement.disabled = true
             deleteBtnElement.disabled = true
             publishBtnElement.enabled = true
+            publishBtnElement.disabled = false;
 
             firstNameElement.value = storyObj.firstName;
             lastNameElement.value = storyObj.lastName;
@@ -123,6 +124,7 @@ function solve() {
             editBtnElement.disabled = true
             deleteBtnElement.disabled = true
             publishBtnElement.enabled = true
+            publishBtnElement.disabled = false;
 
             liElement.remove()
         })
