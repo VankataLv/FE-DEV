@@ -87,7 +87,7 @@ function solve() {
 
         // Functionality off buttons
 
-        // Edit BTN ,Publish ne raboti
+        // Edit BTN ,
         editBtnElement.addEventListener('click', (edit) => {
             saveBtnElement.disabled = true
             editBtnElement.disabled = true
