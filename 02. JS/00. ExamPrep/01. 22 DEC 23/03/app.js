@@ -92,6 +92,10 @@ loadBtnEl.addEventListener('click', loadPresentsFunc);
 //Add BTN Func
 addBtnEl.addEventListener('click', async () => {
 
+    if (giftInputEl.value == "" || forInputEl.value == "" || priceInputEl.value == "") {
+        return
+    }
+
     const gift = giftInputEl.value;
     const forP = forInputEl.value;
     const price = priceInputEl.value;
