@@ -7,7 +7,10 @@ function solve() {
     const authorInputFieldElement = document.getElementById('author');
     const dateInputFieldElement = document.getElementById('date');
 
-    addButtonElement.addEventListener('click', (add) => {
+    addButtonElement.addEventListener('click', (addEvent) => {
+
+        addEvent.preventDefault();
+
         if (genreInputFieldElement.value.trim() != "" &&
             nameInputFieldElement.value.trim() != "" &&
             authorInputFieldElement.value.trim() != "" &&
