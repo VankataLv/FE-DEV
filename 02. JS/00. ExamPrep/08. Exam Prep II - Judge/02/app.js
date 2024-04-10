@@ -1,78 +1,92 @@
 window.addEventListener('load', solve);
 
 function solve() {
-    const addButtonElement = document.getElementById('add-btn');
-    const genreInputFieldElement = document.getElementById('genre');
-    const nameInputFieldElement = document.getElementById('name');
-    const authorInputFieldElement = document.getElementById('author');
-    const dateInputFieldElement = document.getElementById('date');
+    const divAllHitsContainerEl = document.querySelector('.all-hits-container');
+    const divSavedContainerEl = document.querySelector('.saved-container');
 
-    addButtonElement.addEventListener('click', (addEvent) => {
+    const genreInputEl = document.getElementById('genre');
+    const nameInputEl = document.getElementById('name');
+    const authorInputEl = document.getElementById('author');
+    const dateInputEl = document.getElementById('date');
+    const addBtnEl = document.getElementById('add-btn');
 
-        addEvent.preventDefault();
+    addBtnEl.addEventListener('click', (addBtnEvent) => {
+        addBtnEvent.preventDefault();
 
-        if (genreInputFieldElement.value.trim() != "" &&
-            nameInputFieldElement.value.trim() != "" &&
-            authorInputFieldElement.value.trim() != "" &&
-            dateInputFieldElement.value.trim() != "") {
+        if (genreInputEl.value == "" ||
+            nameInputEl.value == "" ||
+            authorInputEl.value == "" ||
+            dateInputEl.value == "") {
+            return
+        };
 
-            let songObj = {};
-            songObj.genre = genreInputFieldElement.value;
-            songObj.nameSong = nameInputFieldElement.value;
-            songObj.author = authorInputFieldElement.value;
-            songObj.date = dateInputFieldElement.value;
+        const divHitsInfoEl = document.createElement('div');
+        divHitsInfoEl.classList.add('hits-info');
 
-            genreInputFieldElement.textContent = "";
-            nameInputFieldElement.textContent = "";
-            authorInputFieldElement.textContent = "";
-            dateInputFieldElement.textContent = "";
+        const imgEl = document.createElement('img');
+        imgEl.setAttribute('src', './static/img/img.png')
+        divHitsInfoEl.appendChild(imgEl);
 
-            let divElementAllHitsContainer = document.querySelector('.all-hits-container');
+        const h2GenreEl = document.createElement('h2');
+        h2GenreEl.textContent = `Genre: ${genreInputEl.value}`;
+        divHitsInfoEl.appendChild(h2GenreEl);
 
-            let divElementHitsInfo = document.createElement("div");
-            divElementHitsInfo.classList.add('hits-info');
+        const h2NameEl = document.createElement('h2');
+        h2NameEl.textContent = `Name: ${nameInputEl.value}`;
+        divHitsInfoEl.appendChild(h2NameEl);
 
-            let imgElement = document.createElement("img");
-            divElementHitsInfo.setAttribute('src', ".\static\img\img.png");
-            divElementHitsInfo.appendChild(imgElement);
+        const h2AuthorEl = document.createElement('h2');
+        h2AuthorEl.textContent = `Author: ${authorInputEl.value}`;
+        divHitsInfoEl.appendChild(h2AuthorEl);
 
-            let h2ElementGenre = document.createElement("h2");
-            h2ElementGenre.textContent = `Genre: ${songObj['genre']}`
-            divElementHitsInfo.appendChild(h2ElementGenre);
+        const h3DateEl = document.createElement('h3');
+        h3DateEl.textContent = `Date: ${dateInputEl.value}`;
+        divHitsInfoEl.appendChild(h3DateEl);
 
-            let h2ElementName = document.createElement("h2");
-            h2ElementName.textContent = `Name: ${songObj['nameSong']}`
-            divElementHitsInfo.appendChild(h2ElementName);
+        const saveBtnEl = document.createElement('button');
+        saveBtnEl.classList.add('save-btn');
+        saveBtnEl.textContent = 'Save song';
+        divHitsInfoEl.appendChild(saveBtnEl);
 
-            let h2ElementAuthor = document.createElement("h2");
-            h2ElementAuthor.textContent = `Author: ${songObj['author']}`
-            divElementHitsInfo.appendChild(h2ElementAuthor);
+        const likeBtnEl = document.createElement('button');
+        likeBtnEl.classList.add('like-btn');
+        likeBtnEl.textContent = 'Like song';
+        divHitsInfoEl.appendChild(likeBtnEl);
 
-            let h2ElementDate = document.createElement("h2");
-            h2ElementDate.textContent = `Date: ${songObj['date']}`
-            divElementHitsInfo.appendChild(h2ElementDate);
+        const deleteBtnEl = document.createElement('button');
+        deleteBtnEl.classList.add('delete-btn');
+        deleteBtnEl.textContent = 'Delete';
+        divHitsInfoEl.appendChild(deleteBtnEl);
 
-            const saveBtnElement = document.createElement("button")
-            const likeBtnElement = document.createElement("button")
-            const deleteBtnElement = document.createElement("button")
+        divAllHitsContainerEl.appendChild(divHitsInfoEl);
 
-            saveBtnElement.classList.add('save-btn')
-            likeBtnElement.classList.add('like-btn')
-            deleteBtnElement.classList.add('delete-btn')
+        genreInputEl.value = "";
+        nameInputEl.value = "";
+        authorInputEl.value = "";
+        dateInputEl.value = "";
 
-            saveBtnElement.textContent = 'Save song'
-            likeBtnElement.textContent = 'Like song'
-            deleteBtnElement.textContent = 'Delete'
+        //LIKE BTN
+        likeBtnEl.addEventListener('click', (likeBtnEvent) => {
+            const likesParaEl = document.querySelector('.likes p');
+            let dataArr = likesParaEl.textContent.split(" ");
+            dataArr[2] = Number(dataArr[2]) + 1;
+            let newDataStr = dataArr.join(" ");
+            likesParaEl.textContent = newDataStr;
+            likeBtnEl.disabled = true;
+        })
+        // SAVE BTN
+        saveBtnEl.addEventListener('click', (saveBtnEvent) => {
+            let newDivHitsInfoEl = divHitsInfoEl;
+            divHitsInfoEl.remove();
 
-            saveBtnElement.enabled = true
-            likeBtnElement.enabled = true
-            deleteBtnElement.enabled = true
+            newDivHitsInfoEl.removeChild(likeBtnEl)
+            newDivHitsInfoEl.removeChild(saveBtnEl)
 
-            divElementHitsInfo.appendChild(saveBtnElement)
-            divElementHitsInfo.appendChild(likeBtnElement)
-            divElementHitsInfo.appendChild(deleteBtnElement)
-
-            divElementAllHitsContainer.appendChild(divElementHitsInfo)
-        }
+            divSavedContainerEl.appendChild(newDivHitsInfoEl)
+        })
+        // DELETE BTN
+        deleteBtnEl.addEventListener('click', (deleteBtnEvent) => {
+            divHitsInfoEl.remove();
+        })
     })
 }
