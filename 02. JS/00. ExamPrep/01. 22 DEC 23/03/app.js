@@ -4,7 +4,7 @@ const loadBtnEl = document.getElementById('load-presents');
 const addBtnEl = document.getElementById('add-present');
 const editBtnEl = document.getElementById('edit-present');
 
-const divGiftListEl = document.getElementById('gift-list');
+const divListEl = document.getElementById('gift-list');
 let currentPresentId = null;
 
 const giftInputEl = document.getElementById('gift');
@@ -12,12 +12,12 @@ const forInputEl = document.getElementById('for');
 const priceInputEl = document.getElementById('price');
 
 //Load BTN func
-const loadPresentsFunc = async () => {
+const loadCourcesFunc = async () => {
     const response = await fetch(baseUrl);
     const data = await response.json();
     console.log(Object.values(data))
 
-    divGiftListEl.innerHTML = "";
+    divListEl.innerHTML = "";
     editBtnEl.disabled = true;
 
     for (const presentObj of Object.values(data)) {
@@ -58,7 +58,7 @@ const loadPresentsFunc = async () => {
 
             divGiftSockEl.remove();
             currentPresentId = null;
-            loadPresentsFunc();
+            loadCourcesFunc();
         })
         //-------------
 
@@ -83,11 +83,11 @@ const loadPresentsFunc = async () => {
         divGiftSockEl.appendChild(divContentEl);
         divGiftSockEl.appendChild(divBtnsContainerEl);
 
-        divGiftListEl.appendChild(divGiftSockEl)
+        divListEl.appendChild(divGiftSockEl)
 
     }//for cycle end
 }
-loadBtnEl.addEventListener('click', loadPresentsFunc);
+loadBtnEl.addEventListener('click', loadCourcesFunc);
 
 //Add BTN Func
 addBtnEl.addEventListener('click', async () => {
@@ -111,7 +111,7 @@ addBtnEl.addEventListener('click', async () => {
     }
     clearInputFieldsFunc()
 
-    loadPresentsFunc()
+    loadCourcesFunc()
 });
 
 //Edit BTN Func
@@ -137,7 +137,7 @@ editBtnEl.addEventListener('click', async () => {
     editBtnEl.disabled = true;
     addBtnEl.disabled = false;
     clearInputFieldsFunc()
-    loadPresentsFunc()
+    loadCourcesFunc()
 });
 
 function clearInputFieldsFunc() {

@@ -1,83 +1,66 @@
-function solve(inputArr) {
-    ranking = [];
-    horses = inputArr.shift().split("|");
-    let horsesInitialLength = horses.length
-    for (let i = 0; i < horsesInitialLength; i++) {
-        ranking.push(horses.pop())
+function solve(initialArr) {
+    let orderArr = initialArr.shift().split("|");
+
+    let line = initialArr.shift(" ");
+    while (line != "Finish") {
+        let [cmd, token1, token2] = line.split(" ")
+        // console.log(orderArr)
+        switch (cmd) {
+            case 'Retake':
+                let overtakingHorseIndex = orderArr.indexOf(token1)
+                let overtakenHorseIndex = orderArr.indexOf(token2)
+                if (overtakingHorseIndex < overtakenHorseIndex) {
+                    let newIndexOfOvertaking = overtakenHorseIndex;
+                    let newIndexOfOvertaken = overtakingHorseIndex;
+
+                    orderArr[newIndexOfOvertaking] = token1
+                    orderArr[newIndexOfOvertaken] = token2
+                    console.log(`${token1} retakes ${token2}`)
+                    // console.log(orderArr)
+                }
+                break;
+            case 'Trouble':
+                let troubledHorseName = token1;
+                if (orderArr.indexOf(troubledHorseName) > 0) {
+                    let troubledHorseI = orderArr.indexOf(troubledHorseName)
+                    let nextHorseI = troubledHorseI - 1;
+                    [orderArr[nextHorseI], orderArr[troubledHorseI]] = [orderArr[troubledHorseI], orderArr[nextHorseI]];
+                    console.log(`Trouble for ${troubledHorseName} - drops one position.`)
+                }
+                break;
+            case 'Rage':
+                if (orderArr.indexOf(token1) == orderArr.length - 2) {
+                    let leadinghorseI = orderArr[orderArr.length - 1]
+                    let ragingHorseI = orderArr.indexOf(token1)
+                    orderArr[ragingHorseI], orderArr[leadinghorseI] = orderArr[leadinghorseI], orderArr[ragingHorseI];
+                    console.log(`${token1} rages 2 positions ahead.`)//horse is second
+                }
+                else if (orderArr[orderArr.length - 1] == token1) { console.log(`${token1} rages 2 positions ahead.`) } //horse is first
+                else {
+                    let ragingHorseI = orderArr.indexOf(token1);
+                    let otherHorseI1 = ragingHorseI + 1;
+                    let otherHorseI2 = ragingHorseI + 2;
+
+                    [orderArr[ragingHorseI], orderArr[otherHorseI1], orderArr[otherHorseI2]] = [orderArr[otherHorseI1], orderArr[otherHorseI2], orderArr[ragingHorseI]];
+
+                    console.log(`${token1} rages 2 positions ahead.`)
+                }
+                break;
+            case 'Miracle':
+                let MiracleHorseName = orderArr.shift()
+                orderArr.push(MiracleHorseName)
+                console.log(`What a miracle - ${MiracleHorseName} becomes first.`)
+                break;
+        }
+        line = initialArr.shift(" ");
     }
-
-    for (line of inputArr) {
-        let [cmd, firstData, secondData] = line.split(" ");
-
-        if (cmd == "Retake") {
-            let overtaking = firstData;
-            let overtaken = secondData;
-            if (ranking.indexOf(overtaking) > ranking.indexOf(overtaken)) {
-                let newIndexofOvertaking = ranking.indexOf(overtaken);          //0
-                let newIndexofOvertaken = ranking.indexOf(overtaking);          //1
-                ranking.splice(ranking.indexOf(overtaking), 1)
-                ranking.splice(ranking.indexOf(overtaken), 1)
-                ranking.splice(newIndexofOvertaking, 0, overtaking)
-                ranking.splice(newIndexofOvertaken, 0, overtaken)
-                console.log(`${overtaking} retakes ${overtaken}.`)
-            }
-        }
-
-        else if (cmd == "Trouble") {
-            let horse = firstData;
-            if (ranking.indexOf(horse) < ranking.length - 1) {
-                let oldPosition = ranking.indexOf(horse);
-                ranking.splice(oldPosition, 1)
-                ranking.splice(oldPosition + 1, 0, horse)
-                console.log(`Trouble for ${horse} - drops one position.`)
-            }
-        }
-
-        else if (cmd == "Rage") {
-            let horse = firstData;
-            if (ranking.indexOf(horse) == 1) { //horse is second
-                ranking.shift(ranking.splice(ranking.indexOf(horse), 1))
-            }
-            else if (ranking.indexOf(horse) !== 0) {
-                let oldPosition = ranking.indexOf(horse);
-                ranking.splice(oldPosition, 1)
-                ranking.splice(oldPosition - 2, 0, horse)
-            }
-            console.log(`${horse} rages 2 positions ahead.`)
-        }
-
-        else if (cmd == "Miracle") {
-            let lastHorse = ranking.pop();
-            console.log(`What a miracle - ${lastHorse} becomes first.`)
-            ranking.unshift(lastHorse);
-        }
-        else {
-            break
-        }
-    }
-    let winner = ranking[0];
-    ranking.reverse()
-    console.log(ranking.join("->"))
-    console.log(`The winner is: ${winner}`)
+    winner = orderArr[-1]
+    console.log(`${orderArr.join('->')}`)
+    console.log(`The winner is: ${orderArr.pop()}`)
 }
 
-// solve((['Bella|Alexia|Sugar',
-//     'Retake Alexia Sugar',
-//     'Rage Bella',
-//     'Trouble Bella',
-//     'Finish'])
-// )
+solve(['Bella|Alexia|Sugar',
+    'Rage Sugar',
+    'Rage Alexia',
 
-// solve(['Onyx|Domino|Sugar|Fiona',
-//     'Trouble Onyx',
-//     'Retake Onyx Sugar',
-//     'Rage Domino',
-//     'Miracle',
-//     'Finish'])
-
-solve(['Fancy|Lilly',
-    'Retake Lilly Fancy',
-    'Trouble Lilly',
-    'Trouble Lilly',
-    'Finish',
-    'Rage Lilly'])
+    'Finish'])
