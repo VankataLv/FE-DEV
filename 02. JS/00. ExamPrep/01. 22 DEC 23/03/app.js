@@ -33,9 +33,9 @@ const loadPresentsFunc = async () => {
         changeBtnEl.addEventListener('click', () => {
             currentPresentId = presentObj._id;
 
-            giftInputEl.value = presentObj.gift;
-            forInputEl.value = presentObj.for;
-            priceInputEl.value = presentObj.price;
+            nameInputEl.value = presentObj.gift;
+            numDaysInputEl.value = presentObj.for;
+            fromDateInputEl.value = presentObj.price;
 
             editBtnEl.disabled = false;
             addBtnEl.disabled = true;
@@ -92,13 +92,13 @@ loadBtnEl.addEventListener('click', loadPresentsFunc);
 //Add BTN Func
 addBtnEl.addEventListener('click', async () => {
 
-    if (giftInputEl.value == "" || forInputEl.value == "" || priceInputEl.value == "") {
+    if (nameInputEl.value == "" || numDaysInputEl.value == "" || fromDateInputEl.value == "") {
         return
     }
 
-    const gift = giftInputEl.value;
-    const forP = forInputEl.value;
-    const price = priceInputEl.value;
+    const gift = nameInputEl.value;
+    const forP = numDaysInputEl.value;
+    const price = fromDateInputEl.value;
 
     const response = await fetch(baseUrl, {
         method: "POST",
@@ -116,9 +116,9 @@ addBtnEl.addEventListener('click', async () => {
 
 //Edit BTN Func
 editBtnEl.addEventListener('click', async () => {
-    const gift = giftInputEl.value;
-    const forP = forInputEl.value;
-    const price = priceInputEl.value;
+    const gift = nameInputEl.value;
+    const forP = numDaysInputEl.value;
+    const price = fromDateInputEl.value;
 
     const response = await fetch(`${baseUrl}${currentPresentId}`, {
         method: "PUT",
@@ -141,7 +141,7 @@ editBtnEl.addEventListener('click', async () => {
 });
 
 function clearInputFieldsFunc() {
-    giftInputEl.value = "";
-    forInputEl.value = "";
-    priceInputEl.value = "";
+    nameInputEl.value = "";
+    numDaysInputEl.value = "";
+    fromDateInputEl.value = "";
 }

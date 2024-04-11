@@ -1,95 +1,140 @@
-const loadBtnEl = document.getElementById('load-vacations');
 const baseUrl = 'http://localhost:3030/jsonstore/tasks/';
-const divListEl = document.getElementById('list');
 
+const loadBtnEl = document.getElementById('load-vacations');
 const addBtnEl = document.getElementById('add-vacation');
-const nameInputFieldEl = document.getElementById('name');
-const daysInputFieldEl = document.getElementById('num-days');
-const dateInputFieldEl = document.getElementById('from-date');
-
 const editBtnEl = document.getElementById('edit-vacation');
 
-//Load button functionality
-loadBtnEl.addEventListener('click', loadBtnFunc)
+const divListEl = document.getElementById('list');
+let currentVacationId = null;
 
-//Add button functionality
-addBtnEl.addEventListener('click', (addBtnFunc) => {
-	addBtnFunc.preventDefault();
+const nameInputEl = document.getElementById('name');
+const numDaysInputEl = document.getElementById('num-days');
+const fromDateInputEl = document.getElementById('from-date');
 
-	const newVacationObj = {
-		name: nameInputFieldEl.value,
-		days: daysInputFieldEl.value,
-		date: dateInputFieldEl.value,
-	};
+//Load BTN Func
+const loadVacationsFunc = async () => {
+	const response = await fetch(baseUrl);
+	const data = await response.json();
+	console.log(Object.values(data))
 
-	// POST RQST to server & GET
-	fetch(baseUrl, {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(newVacationObj)
-	})
-		.then(loadBtnFunc)
-
-	nameInputFieldEl.value = "";
-	daysInputFieldEl.value = "";
-	dateInputFieldEl.value = "";
-})
-
-
-function loadBtnFunc() {
-	fetch(baseUrl)
-		.then(result => result.json())
-		.then(dataArr => createVacationsList(Object.values(dataArr)))
-}
-function createVacationsList(arr) {
 	divListEl.innerHTML = "";
+	editBtnEl.disabled = true;
 
-	for (el of arr) {
-		divListEl.appendChild(createVacationInstance(el))
-	}
-}
+	for (const vacationObj of Object.values(data)) {
 
-function createVacationInstance(vacationData) {
-	const divContainerEl = document.createElement('div');
-	divContainerEl.className = 'container';
+		const changeBtnEl = document.createElement('button');
+		changeBtnEl.classList.add('change-btn');
+		changeBtnEl.textContent = "Change";
+		// CHANGE BTN FUNC <------------------------------------
+		changeBtnEl.addEventListener('click', () => {
+			currentVacationId = vacationObj._id;
 
-	const h2NameEl = document.createElement('h2');
-	h2NameEl.textContent = vacationData.name;
+			nameInputEl.value = vacationObj.name;
+			numDaysInputEl.value = vacationObj.days;
+			fromDateInputEl.value = vacationObj.date;
 
-	const h3DateEl = document.createElement('h3');
-	h3DateEl.textContent = vacationData.date;
+			editBtnEl.disabled = false;
+			addBtnEl.disabled = true;
 
-	const h3DaysEl = document.createElement('h3');
-	h3DaysEl.textContent = vacationData.days;
+			divContainerEl.remove();
+			console.log(`change for id ${vacationObj._id} & name ${Object.values(vacationObj)}`)
+		})// end of changeBTN event listener
 
-	const changeBtnEl = document.createElement('button');
-	changeBtnEl.className = 'change-btn';
-	changeBtnEl.textContent = 'Change';
-	changeBtnEl.addEventListener('click', (changeBtnEvent) => {
-		nameInputFieldEl.value = vacationData.name;
-		daysInputFieldEl.value = vacationData.days;
-		dateInputFieldEl.value = vacationData.date;
+		const donetnEl = document.createElement('button');
+		donetnEl.classList.add('done-btn');
+		donetnEl.textContent = "Done";
 
-		divContainerEl.remove()
+		//DONE BTN FUNC <------------------------------------
+		donetnEl.addEventListener('click', async () => {
+			currentVacationId = vacationObj._id;
 
-		addBtnEl.disabled = true
-		editBtnEl.disabled = false
-		editBtnEl.addEventListener('click', (editBtnEvent) => {
-			editBtnEvent.preventDefault()
+			const response = await fetch(`${baseUrl}${currentVacationId}`, {
+				method: 'DELETE'
+			});
 
+			divContainerEl.remove();
+			currentVacationId = null;
+			loadVacationsFunc();
 		})
+		//end of delete BTN -------------
 
+		//content div create
+		const divContainerEl = document.createElement('div');
+		divContainerEl.classList.add('container');
+
+		const h2NameEl = document.createElement('h2');
+		h2NameEl.textContent = vacationObj.name;
+		const h3DateEL = document.createElement('h3');
+		h3DateEL.textContent = vacationObj.date;
+		const h3DaysEl = document.createElement('h3');
+		h3DaysEl.textContent = vacationObj.days;
+
+		divContainerEl.appendChild(h2NameEl)
+		divContainerEl.appendChild(h3DateEL)
+		divContainerEl.appendChild(h3DaysEl)
+		divContainerEl.appendChild(changeBtnEl)
+		divContainerEl.appendChild(donetnEl)
+		//-----
+		divListEl.appendChild(divContainerEl)
+
+	}//for cycle end
+}
+loadBtnEl.addEventListener('click', loadVacationsFunc);
+
+//Add BTN Func
+addBtnEl.addEventListener('click', async (e) => {
+	e.preventDefault();
+
+	if (nameInputEl.value == "" || numDaysInputEl.value == "" || fromDateInputEl.value == "") {
+		return
+	}
+
+	const name = nameInputEl.value;
+	const days = numDaysInputEl.value;
+	const date = fromDateInputEl.value;
+
+	const response = await fetch(baseUrl, {
+		method: "POST",
+		headers: { 'content-type': 'application/json' },
+		body: JSON.stringify({ name: name, days: days, date: date, }),
 	})
 
-	const doneBtnEl = document.createElement('button');
-	doneBtnEl.className = 'done-btn';
-	doneBtnEl.textContent = 'Done';
+	if (!response.ok) {
+		return;
+	}
+	clearInputFieldsFunc()
 
-	divContainerEl.appendChild(h2NameEl)
-	divContainerEl.appendChild(h3DateEl)
-	divContainerEl.appendChild(h3DaysEl)
-	divContainerEl.appendChild(changeBtnEl)
-	divContainerEl.appendChild(doneBtnEl)
+	loadVacationsFunc()
+});
 
-	return divContainerEl
+//Edit BTN Func
+editBtnEl.addEventListener('click', async () => {
+	const name = nameInputEl.value;
+	const days = numDaysInputEl.value;
+	const date = fromDateInputEl.value;
+
+	const response = await fetch(`${baseUrl}${currentVacationId}`, {
+		method: "PUT",
+		headers: { 'content-type': 'application/json' },
+		body: JSON.stringify({
+			_id: currentVacationId,
+			name: name,
+			days: days,
+			date: date,
+		}),
+	})
+
+	if (!response.ok) {
+		return;
+	}
+	editBtnEl.disabled = true;
+	addBtnEl.disabled = false;
+	clearInputFieldsFunc()
+	loadVacationsFunc()
+});
+
+function clearInputFieldsFunc() {
+	nameInputEl.value = "";
+	numDaysInputEl.value = "";
+	fromDateInputEl.value = "";
 }
